@@ -2,8 +2,8 @@ use std::fs::File;
 use std::io::{self, BufRead};
 
 const INPUT_PATH: &str = 
-// "./input";
-"./test";
+"./input";
+// "./test";
 
 fn main() {
     p1();
@@ -11,7 +11,7 @@ fn main() {
 }
 
 fn p1() {
-    let file = File::open(INPUT_PATH).expect("failed to open input file");
+    let file = File::open(INPUT_PATH).expect("failed to open input file, pls run in src/");
     let lines = io::BufReader::new(file).lines();
     let mut dial_value = 50;
     let mut zero_count = 0;
@@ -36,7 +36,7 @@ fn p1() {
 }
 
 fn p2() {
-    let file = File::open(INPUT_PATH).expect("failed to open input file");
+    let file = File::open(INPUT_PATH).expect("failed to open input file, pls run in src/");
     let lines = io::BufReader::new(file).lines();
     let mut dial_value = 50;
     let mut zero_count = 0;
@@ -51,7 +51,7 @@ fn p2() {
         match dial_direction {
             "L" => {
                 dial_value -= click_count;
-                if dial_value > 0 {
+                if dial_value < 0 {
                     dial_value += 100;
                     // if dial started at 0, the prev iteration already accounted for it 
                     // if the dial ended at 0, the end of the current iteration will handle it 
