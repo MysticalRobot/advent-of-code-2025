@@ -11,7 +11,7 @@ fn main() {
 }
 
 fn p1() {
-    let file = File::open(INPUT_PATH).expect("failed to open input file, pls run in src/");
+    let file = File::open(INPUT_PATH).expect("failed to open input file, be sure to run main in src/");
     let lines = io::BufReader::new(file).lines();
     let mut dial_value = 50;
     let mut zero_count = 0;

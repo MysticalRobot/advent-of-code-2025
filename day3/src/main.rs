@@ -6,7 +6,7 @@ const INPUT_PATH: &str =
 // "./test";
 
 fn main() {
-    let file = File::open(INPUT_PATH).expect("failed to open input file, pls run in src/");
+    let file = File::open(INPUT_PATH).expect("failed to open input file, be sure to run main in src/");
     let battery_banks = io::BufReader::new(file).lines();
     let mut p1_total_joltage = 0;
     let mut p2_total_joltage = 0;

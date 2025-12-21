@@ -6,7 +6,7 @@ const INPUT_PATH: &str =
 // "./test";
 
 fn main() {
-    let file = File::open(INPUT_PATH).expect("failed to open input file, pls run in src/");
+    let file = File::open(INPUT_PATH).expect("failed to open input file, be sure to run main in src/");
     let mut id_ranges = String::new();
     io::BufReader::new(file).read_line(&mut id_ranges).expect("failed to read input file");
     let id_ranges: Vec<&str> = id_ranges.trim().split(',').collect();
